@@ -1,0 +1,19 @@
+.heading {
+	font-weight: 100;
+	font-size: rem-calc(120);
+	color: $white;
+	line-height: 1;
+
+	@media #{$small-only} {
+		font-weight: 300;
+	}
+}
+.sub-heading, .page-header {
+	font-weight: 300;
+	font-size: rem-calc(60);
+	text-align: center;
+	color: $gray;
+}
+.page-header {
+	padding-top: rem-calc(30);
+}

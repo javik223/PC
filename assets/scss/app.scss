@@ -1,0 +1,166 @@
+@import "compass/reset";
+@import "bourbon";
+
+@import "modules/color";
+
+@import "settings";
+//@import "foundation";
+
+@import "bourbon";
+@import "foundation/components/block-grid";
+@import "foundation/components/clearing";
+@import "foundation/components/flex-video";
+@import "foundation/components/forms";
+@import "foundation/components/grid";
+@import "foundation/components/type";
+@import "foundation/components/inline-lists";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//  "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+@import "modules/font";
+@import "modules/type";
+
+
+body {
+	//overflow: hidden;
+	font-family: $primary-font;
+	background-color: $white;
+
+	&.home {
+		background: image-url("PC-Paul-Chisom---looking-up.jpg") no-repeat;
+		background-position: center;
+	}
+	
+	&.home, &.about {
+		background-size: cover;
+	}
+
+	&.about {
+		background-color: #b7b6c3;
+		@media #{$medium-up} {
+			background: image-url("PC---Paul-Chisom-Biography-image.jpg") no-repeat scroll;
+			background-position: 60% top;
+		}
+
+		@media #{$large-up} {
+			background-position: center top;
+		}
+	}
+
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+
+@import "modules/header";
+@import "modules/music";
+@import "modules/media";
+
+.home-body, .body {
+	width: 100%;
+	padding-left: 3%;
+	padding-right: 3%;
+	float: left;
+}
+
+.share {
+	.icon-heart	{
+		font-size: rem-calc(30);
+		color: $red;
+		cursor: pointer;
+
+		&:hover {
+			@include transform(translate(rotateX(30deg)));
+		}
+	}
+}
+
+.alert-box {
+	padding: rem-calc(10%);
+	padding-top: rem-calc(30%);
+	background-color: $red;
+	@include inline-block;
+	
+
+	h3 {
+		color: $white;
+		font-family: $secondary-font;
+		line-height: 0.9;
+	}
+}
+.soundcloud-box {
+	width: 400px;
+	margin-bottom: rem-calc(20);
+	height: 166px;
+
+	@media #{$small-only} {
+		max-width: 100%;
+		height: 100px;
+	}
+}
+.isHidden {
+	display: none;
+}
+.home {
+	&.heading {
+		@media #{$medium-only} {
+			padding-top: rem-calc(200%);
+		}
+
+		@media #{$small-only} {
+			padding-top: rem-calc(20%);
+		}
+	}
+}
+.mobileonly {
+	@media #{$medium-up} {
+		display: none;
+	}
+
+	img {
+		padding-bottom: em(20);
+	}
+}
