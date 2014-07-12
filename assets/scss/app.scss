@@ -66,6 +66,11 @@ body {
 		background: image-url("PC-Paul-Chisom---looking-up.jpg") no-repeat;
 		background-position: center;
 	}
+	&.contact {
+		background: image-url("PC---Paul-Chisom-Contact.jpg") no-repeat;
+		background-position: center top;
+		bacground-size: cover;
+	}
 	
 	&.home, &.about {
 		background-size: cover;
@@ -107,13 +112,42 @@ html {
 }
 
 .share {
+	float: left;
+	@include inline-block;
+	//background-color: $white;
+	position: relative;
+
 	.icon-heart	{
-		font-size: rem-calc(30);
+		font-size: rem-calc(40);
 		color: $red;
 		cursor: pointer;
+		@include transition ( all 1s ease-in-out );
+		@include inline-block;
 
 		&:hover {
-			@include transform(translate(rotateX(30deg)));
+			@include transform(scale(1.2));
+		}
+	}
+
+	.social-share {
+		background-color: $white;
+		border-radius: 4px;
+		padding: rem-calc(10) rem-calc(20);
+		position: relative;
+		@include inline-block;
+		margin-top: rem-calc(-10);
+		display: none;
+
+		&:before {
+			content: '';
+			@include triangle(16px, $white, left);
+			position: absolute;
+			left: -16px;
+
+		}
+
+		[class^="icon-"] {
+			padding-left: rem-calc(10);
 		}
 	}
 }
@@ -162,5 +196,39 @@ html {
 
 	img {
 		padding-bottom: em(20);
+	}
+}
+.contact-social-media {
+	font-size: rem-calc(50);
+	margin-top: rem-calc(40);
+	text-align: center;
+
+	@media #{$medium-only} {
+		font-size: rem-calc(30);
+	}
+
+	a {
+		color: $white;
+		padding-bottom: rem-calc(40);
+		@include inline-block;
+		@include transition ( all 0.6s ease-in-out );
+
+		&:hover {
+			color: $gray;
+		}
+	}
+}
+.video {
+	> iframe {
+		width: 100%;
+		height: 300px;
+
+		@media #{$medium-only} {
+			height: 600px;
+		}
+
+		@media #{$large-up} {
+			height: 780px;
+		}
 	}
 }

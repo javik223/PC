@@ -46,6 +46,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/PC---Paul-Chisom-Contact.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 115415,
+		"inputAbbreviatedPath": "\/assets\/img\/PC---Paul-Chisom-Contact.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/PC---Paul-Chisom-Contact.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/PC-Paul-Chisom---looking-up.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -93,6 +103,16 @@
 		"initialSize": 192769,
 		"inputAbbreviatedPath": "\/assets\/img\/PC10.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/PC10.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/PC11.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 148480,
+		"inputAbbreviatedPath": "\/assets\/img\/PC11.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/PC11.jpg",
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -6131,6 +6151,14 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/config.rb",
 		"outputAbbreviatedPath": "\/config.rb",
+		"outputPathIsSetByUser": 0
+		},
+	"\/contact.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/contact.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
 	"\/index.html": {

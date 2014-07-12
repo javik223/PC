@@ -10,7 +10,10 @@ $(document).ready(function(){
         $lyricsLink,
         $creditsLink,
         $lyricsCloseBtn,
-        $creditsCloseBtn;
+        $creditsCloseBtn,
+        $shareBtn,
+        $socialShare,
+        $share;
 
     $navLinks = $(".js-nav-links li");
     $navMenu = $(".js-nav-menu");
@@ -20,6 +23,9 @@ $(document).ready(function(){
     $creditsLink = $(".js-credits-link");
     $lyricsCloseBtn = $(".js-lyrics-close");
     $creditsCloseBtn = $(".js-credits-close");
+    $shareBtn = $(".js-share");
+    $socialShare = $(".js-social-share");
+    $share = $(".share");
 
     //If device is mobile, fit Headings to page
     if ( Modernizr.mq('(max-width: 600px)') ) {
@@ -100,15 +106,20 @@ $(document).ready(function(){
         if ($extra === "credits" ) {
              $element = $target.parent().parent().siblings(".music-item_credits");
         }
+
+        //Use hack to hide and view the element, then get its height
         $element.show();
         $elementHeight = $element.outerHeight();
+        yPos = $element.offset().top;
         $element.hide();
-        yPos = $element.position().top;
+
         console.log(yPos);
-        //console.log($elementHeight);
-        //alert($element.height());
-        TweenMax.fromTo($element, 2, {height: 0, display: 'block'}, {height: $elementHeight, autoAlpha: 1, rotationZ: 0, ease: Sine.easeOut});
-        //TweenMax.to(window, 1, {scrollTo: {y: yPos}, ease: Cubic.easeInOut});
+        //$("html, body").animate({scrollTop: yPos}, 1000);
+        TweenMax.to(window, 1, {scrollTo: {y: yPos}, ease: Cubic.easeInOut});
+
+        setTimeout(function(){
+            TweenMax.fromTo($element, 2, {height: 0, display: 'block'}, {height: $elementHeight, autoAlpha: 1, rotationZ: 0, ease: Sine.easeOut});
+        }, 1000);
     }
 
     //Hide lyrics window when close buttons is clicked
@@ -118,7 +129,15 @@ $(document).ready(function(){
 
     }
 
-    $(".media-items").packery({
-        itemSelector: '.media-item'
+    $share.on('mouseenter', function(){
+        TweenMax.fromTo($socialShare, 1.4, {x: 50, autoAlpha: 0, display: 'inline-block', z: 0}, {x: 0, autoAlpha: 1, ease: Back.easeInOut});
+    }).on('mouseleave', function() {
+        TweenMax.fromTo($socialShare, 1.4, {x: 0, autoAlpha: 1}, {x: 50, autoAlpha: 0, display: 'none', z: 0, ease: Back.easeInOut});
     });
+
+    $(".media-items").packery({
+        itemSelector: '.media-item',
+        isInitLayout: true
+    });
+
 });
