@@ -7,13 +7,13 @@
 //@import "foundation";
 
 @import "bourbon";
-@import "foundation/components/block-grid";
+//@import "foundation/components/block-grid";
 @import "foundation/components/clearing";
-@import "foundation/components/flex-video";
+//@import "foundation/components/flex-video";
 @import "foundation/components/forms";
 @import "foundation/components/grid";
 @import "foundation/components/type";
-@import "foundation/components/inline-lists";
+//@import "foundation/components/inline-lists";
 
 // Or selectively include components
 // @import
@@ -70,6 +70,10 @@ body {
 		background: image-url("PC---Paul-Chisom-Contact.jpg") no-repeat;
 		background-position: center top;
 		bacground-size: cover;
+
+		@media #{$large-up} {
+			background-size: cover;
+		}
 	}
 	
 	&.home, &.about {
@@ -85,6 +89,7 @@ body {
 
 		@media #{$large-up} {
 			background-position: center top;
+			background-size: cover;
 		}
 	}
 
@@ -99,6 +104,10 @@ html {
 	overflow-x: hidden;
 }
 
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
 
 @import "modules/header";
 @import "modules/music";
@@ -118,7 +127,7 @@ html {
 	position: relative;
 
 	.icon-heart	{
-		font-size: rem-calc(40);
+		font-size: rem-calc(30);
 		color: $red;
 		cursor: pointer;
 		@include transition ( all 1s ease-in-out );
@@ -135,7 +144,7 @@ html {
 		padding: rem-calc(10) rem-calc(20);
 		position: relative;
 		@include inline-block;
-		margin-top: rem-calc(-10);
+		top: rem-calc(-10);
 		display: none;
 
 		&:before {
@@ -230,5 +239,69 @@ html {
 		@media #{$large-up} {
 			height: 780px;
 		}
+	}
+}
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 3000;
+	background-color: rgba($white, 0.97);
+	display: table;
+	vertical-align: middle;
+	overflow: scroll;
+	left: 50%;
+	@include transform( translateX(-50%) );
+	@include animation( mod 1.0s ease-in );
+	visibility: hidden;
+	padding: rem-calc(100);
+
+	@media #{$small-only} {
+		padding: rem-calc(20);
+	}
+
+	@media #{$medium-only} {
+		padding: rem-calc(40);
+	}
+
+	.overlay-centered {
+		display: table-cell;
+		vertical-align: middle;
+		visibility: hidden;
+	}
+
+	.overlay-description {
+		font-size: 80%;
+		padding-top: rem-calc(20);
+
+		@media #{$large-up} {
+			padding-left: rem-calc(20);
+			padding-top: 0;
+		}
+	}
+
+	.icon-close {
+		font-size: rem-calc(40);
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $black;
+		color: $white;
+		padding: rem-calc(10);
+		cursor: pointer;
+		@include transition ( all 0.6s ease-in-out );
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+@include keyframes( mod ) {
+	from {
+		width: 0;
+		opacity: 0;
+	} to {
+		width: 100%;
+		opacity: 1;
 	}
 }

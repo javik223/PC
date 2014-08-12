@@ -23,6 +23,8 @@
 	top: 0;
 	padding: 5%;
 	display: none;
+	padding-bottom: rem-calc(20);
+	margin-bottom: rem-calc(20);
 
 	@media #{$small-only} {
 		padding: 8%;
@@ -94,5 +96,44 @@
 			z-index: 300;
 			position: relative;
 		}
+	}
+}
+.music-item_listen-buy {
+	padding-top: rem-calc(20);
+	//padding-bottom: rem-calc(20);
+
+	[class^="icon-"] {
+		font-size: 180%;
+		padding-right: rem-calc(20);
+		color: #000;
+		@include transition ( all 0.6s ease-in-out );
+		@include inline-block;
+		padding-bottom: rem-calc(20);
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	&.large {
+
+		[class^="icon-"] {
+			font-size: 300%;
+		}
+	}
+}
+.music-item_lyrics-small {
+	background-color: $black;
+	float: left;
+	width: 100%;
+	padding: rem-calc(50);
+	color: lighten($gray, 30%);
+
+	h3 {
+		color: lighten($gray, 30%);
+	}
+
+	p {
+		font-size: rem-calc(14);
 	}
 }

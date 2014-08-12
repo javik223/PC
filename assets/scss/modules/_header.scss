@@ -33,6 +33,11 @@
 		color: lighten($gray, 30%);
 		margin-top: rem-calc(10%);
 
+		a {
+			color: lighten($gray, 30%);
+			@include transition ( all 0.6s ease-in-out );
+		}
+
 		@media #{$small-only} {
 			display: none;
 			width: 100%;
@@ -84,6 +89,7 @@
 
 	.nav_links {
 		z-index: 100;
+		position: relative;
 
 		@media #{$small-only} {
 			margin-top: rem-calc(-50%);

@@ -1,0 +1,69 @@
+{embed="Main/.header"}
+
+	<div class="overlay">
+		
+		<div class="row overlay-centered collapse">
+
+		{exp:channel:entries channel="videos" category_id="1" disable="member_data" limit="1"}
+
+			<h3>{title}</h3>
+
+			<div class="overlay-video fitVideo large-10 column">
+				<iframe src="//www.youtube.com/embed/{video_url}?rel=0&controls=1&showinfo=0" frameborder="0" allowfullscreen controls="0"></iframe>
+			</div>
+
+			<div class="large-2 column">
+				<p class="overlay-description">{video_description}</p>
+			</div>
+		{/exp:channel:entries}
+		</div>
+		
+		<div class="icon-close js-overlay-close"></div>
+	</div>
+
+  <div class="body">
+    <h2 class="page-header">VIDEOS</h2>
+
+	{if segment_2 == ""}
+		{exp:channel:entries channel="videos" category_id="1" disable="member_data" limit="1"}
+	    <h3>{title}</h3>
+	    <div class="video">
+	      <iframe width="100%" src="//www.youtube.com/embed/{video_url}?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen controls="0"></iframe>
+	    </div>
+	    {/exp:channel:entries}
+
+	    {if:else}
+	    	{exp:channel:entries channel="videos" disable="member_data" limit="1"}
+		    <h3>{title}</h3>
+		    <div class="video">
+		      <iframe width="100%" src="//www.youtube.com/embed/{video_url}?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen controls="0"></iframe>
+		    </div>
+		    {/exp:channel:entries}
+	{/if}
+
+    <div class="video-thumbs collapse">
+    {exp:channel:entries channel="videos" disable="member_data" category_id="not 1" dynamic="no"}
+    	<a href="{title_permalink='/videos'}" class="js-video-link" data-youtube="{video_url}" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+	    	<div class="medium-6 large-4 column item">
+	    		<div class="image">
+	    			<img src="{video_thumb}" alt="{title}">
+
+	    			<div class="description">
+	    				<div class="centered" itemprop="description">
+	    					{video_description}
+	    				</div>
+	    			</div>
+	    		</div>
+
+	    		<h3 class="title" itemprop="name">{title}</h3>
+
+	    		<meta itemprop="duration" content="T1M33S" />
+				  <meta itemprop="thumbnailUrl" content="{video_thumb}" />
+				  <meta itemprop="contentUrl" content="{title_permalink='/videos'}" />
+				  <meta itemprop="embedUrl" content="{video_full_embed}" />
+	    	</div>
+	    </a>
+	{/exp:channel:entries}
+    </div>
+  </div> 
+{embed="Main/.footer"}

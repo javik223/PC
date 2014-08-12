@@ -1,0 +1,142 @@
+/**
+ * DK Videos
+ *
+ * @package		DK Videos
+ * @version		Version 1.0b1
+ * @author		Benjamin David
+ * @copyright	Copyright (c) 2012 - DUKT
+ * @link		http://dukt.net/dk-videos/
+ *
+ */
+.videoplayer-box > * {
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+	   v2.0 | 20110126
+	   License: none (public domain)
+	*/
+
+  /* HTML5 display-role reset for older browsers */
+
+}
+.videoplayer-box > * html,
+.videoplayer-box > * body,
+.videoplayer-box > * div,
+.videoplayer-box > * span,
+.videoplayer-box > * applet,
+.videoplayer-box > * object,
+.videoplayer-box > * iframe,
+.videoplayer-box > * h1,
+.videoplayer-box > * h2,
+.videoplayer-box > * h3,
+.videoplayer-box > * h4,
+.videoplayer-box > * h5,
+.videoplayer-box > * h6,
+.videoplayer-box > * p,
+.videoplayer-box > * blockquote,
+.videoplayer-box > * pre,
+.videoplayer-box > * a,
+.videoplayer-box > * abbr,
+.videoplayer-box > * acronym,
+.videoplayer-box > * address,
+.videoplayer-box > * big,
+.videoplayer-box > * cite,
+.videoplayer-box > * code,
+.videoplayer-box > * del,
+.videoplayer-box > * dfn,
+.videoplayer-box > * em,
+.videoplayer-box > * img,
+.videoplayer-box > * ins,
+.videoplayer-box > * kbd,
+.videoplayer-box > * q,
+.videoplayer-box > * s,
+.videoplayer-box > * samp,
+.videoplayer-box > * small,
+.videoplayer-box > * strike,
+.videoplayer-box > * strong,
+.videoplayer-box > * sub,
+.videoplayer-box > * sup,
+.videoplayer-box > * tt,
+.videoplayer-box > * var,
+.videoplayer-box > * b,
+.videoplayer-box > * u,
+.videoplayer-box > * i,
+.videoplayer-box > * center,
+.videoplayer-box > * dl,
+.videoplayer-box > * dt,
+.videoplayer-box > * dd,
+.videoplayer-box > * ol,
+.videoplayer-box > * ul,
+.videoplayer-box > * li,
+.videoplayer-box > * fieldset,
+.videoplayer-box > * form,
+.videoplayer-box > * label,
+.videoplayer-box > * legend,
+.videoplayer-box > * table,
+.videoplayer-box > * caption,
+.videoplayer-box > * tbody,
+.videoplayer-box > * tfoot,
+.videoplayer-box > * thead,
+.videoplayer-box > * tr,
+.videoplayer-box > * th,
+.videoplayer-box > * td,
+.videoplayer-box > * article,
+.videoplayer-box > * aside,
+.videoplayer-box > * canvas,
+.videoplayer-box > * details,
+.videoplayer-box > * embed,
+.videoplayer-box > * figure,
+.videoplayer-box > * figcaption,
+.videoplayer-box > * footer,
+.videoplayer-box > * header,
+.videoplayer-box > * hgroup,
+.videoplayer-box > * menu,
+.videoplayer-box > * nav,
+.videoplayer-box > * output,
+.videoplayer-box > * ruby,
+.videoplayer-box > * section,
+.videoplayer-box > * summary,
+.videoplayer-box > * time,
+.videoplayer-box > * mark,
+.videoplayer-box > * audio,
+.videoplayer-box > * video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.videoplayer-box > * article,
+.videoplayer-box > * aside,
+.videoplayer-box > * details,
+.videoplayer-box > * figcaption,
+.videoplayer-box > * figure,
+.videoplayer-box > * footer,
+.videoplayer-box > * header,
+.videoplayer-box > * hgroup,
+.videoplayer-box > * menu,
+.videoplayer-box > * nav,
+.videoplayer-box > * section {
+  display: block;
+}
+.videoplayer-box > * body {
+  line-height: 1;
+}
+.videoplayer-box > * ol,
+.videoplayer-box > * ul {
+  list-style: none;
+}
+.videoplayer-box > * blockquote,
+.videoplayer-box > * q {
+  quotes: none;
+}
+.videoplayer-box > * blockquote:before,
+.videoplayer-box > * blockquote:after,
+.videoplayer-box > * q:before,
+.videoplayer-box > * q:after {
+  content: '';
+  content: none;
+}
+.videoplayer-box > * table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

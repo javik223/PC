@@ -11,9 +11,17 @@ $(document).ready(function(){
         $creditsLink,
         $lyricsCloseBtn,
         $creditsCloseBtn,
+        $overlayCloseBtn,
         $shareBtn,
         $socialShare,
-        $share;
+        $share,
+        timer,
+        $videoItems,
+        $fitVideo,
+        $overlay,
+        $overlayCentered,
+        $videoLink;
+
 
     $navLinks = $(".js-nav-links li");
     $navMenu = $(".js-nav-menu");
@@ -26,6 +34,12 @@ $(document).ready(function(){
     $shareBtn = $(".js-share");
     $socialShare = $(".js-social-share");
     $share = $(".share");
+    $videoItems = $(".video-thumbs .item");
+    $fitVideo = $(".fitVideo");
+    $overlay = $(".overlay");
+    $overlayCloseBtn = $(".js-overlay-close");
+    $overlayCentered = $overlay.find('.overlay-centered');
+    $videoLink = $(".js-video-link");
 
     //If device is mobile, fit Headings to page
     if ( Modernizr.mq('(max-width: 600px)') ) {
@@ -138,6 +152,54 @@ $(document).ready(function(){
     $(".media-items").packery({
         itemSelector: '.media-item',
         isInitLayout: true
+    });
+
+    $(window).on('scroll', function() {
+        clearTimeout(timer);
+          if(!$("body").hasClass('disable-hover')) {
+            $("body").addClass('disable-hover');
+            console.log("scrolling disabled");
+          }
+          timer = setTimeout(function(){
+            $("body").removeClass('disable-hover');
+          }, 300);
+    });
+
+    $videoItems.on('mouseenter', function(e){
+        if(!$(this).hasClass('hovered')) {
+            $(this).addClass('hovered');
+        }
+    }).on('mouseleave', function(){
+        if($(this).hasClass('hovered')) {
+            $(this).removeClass('hovered');
+        }
+    });
+
+    if ($fitVideo.length > 0) {
+        $fitVideo.fitVids();
+    }
+
+    $overlayCloseBtn.on('click', function(e){
+        ov.to($overlay, 1, {z: 0, autoAlpha: 0});
+        $overlay.find("iframe").attr("src", "");
+
+        e.preventDefault();
+    });
+
+    $videoLink.on("click", function(e){
+        $this = $(this);
+        console.log($this.attr("data-youtube"));
+
+        ov = new TimelineMax({yoyo: true, smoothChildTiming: true});
+        //ov.set($overlayCentered, {autoAlpha: 0.6});
+        ov.fromTo($overlay, 1.2, {z: 0, width: 0, autoAlpha: 0, delay:2}, {autoAlpha: 1, width: "100%", ease:"Back.easeOut"});
+        ov.fromTo($overlayCentered, 2, {z: 0, autoAlpha: 0}, {autoAlpha: 1, ease:"Back.easeOut"});
+
+        $overlay.find("h3").html($this.find(".title").html());
+        $overlay.find("iframe").attr("src", "//www.youtube.com/embed/"+$this.attr("data-youtube")+"?rel=0&controls=1&showinfo=0");
+        $overlay.find(".overlay-description").html($this.find(".description .centered").html());
+
+        e.preventDefault();
     });
 
 });

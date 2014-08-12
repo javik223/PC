@@ -1,0 +1,159 @@
+{embed="Main/.header"}
+<div class="body">
+    <h2 class="page-header">MUSIC</h2>
+
+  {if segment_2 == ""}
+    {exp:channel:entries channel="music" dynamic="no"}
+    <div class="music-item" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+      <div class="music-item_cover-art medium-3 column">
+        <img src="{cover_art}" alt="{title}" itemprop="image">
+      </div>
+
+      <div class="music-item_title medium-3 column">
+        <a href="{title_permalink='/music'}"><h3 itemprop="name">{title}</h3></a>
+
+        <div  class="music-item_description" itemprop="about">
+            {description}
+        </div>
+      </div>
+
+      <div class="music-item_length medium-1 column">
+        {track_length} <meta itemprop="duration" content="PT4M10S" />
+      </div>
+
+      <meta itemprop="inAlbum" content="PC" />
+
+      <meta itemprop="url" content="PC" href="/music" />
+
+      <div class="music-item_play medium-5 column">
+        <iframe width="100%" height="100" scrolling="no" frameborder="no" src="{sound_cloud_url}"></iframe>
+
+        <div class="music-item_listen-buy">
+            {if itunes_link}
+                <a href="{itunes_link}" class="icon-itunes" target="_blank" itemprop="audio"></a>
+            {/if}
+            
+            {if spotify_link}
+                <a href="{spotify_link}" class="icon-spotify" target="_blank" itemprop="audio"></a>
+            {/if}
+
+            {if rdio_link}
+                <a href="{rdio_link}" class="icon-rdio" target="_blank" itemprop="audio"></a>
+            {/if}
+
+            {if amazon_link}
+                <a href="{amazon_link}" class="icon-amazon" target="_blank" itemprop="audio"></a>
+            {/if}
+
+            {if sound_cloud_url}
+                <a href="{sound_cloud_url}" class="icon-soundcloud" target="_blank"></a>
+            {/if}
+        </div>
+
+          <div class="music-item_lyrics-credits">
+            <span class="lyrics js-lyrics-link"><span>LYRICS</span></span>
+
+            <span class="credits js-credits-link"><span>CREDITS</span></span>
+          </div>
+      </div>
+
+      <div class="music-item_lyrics medium-12 column">
+          <h3>{title} Lyrics</h3>
+
+          {lyrics}
+          
+          <div class="close icon-close js-lyrics-close">&nbsp;</div>
+      </div>
+
+      <div class="music-item_credits medium-12 column">
+          <h3>{title} CREDITS</h3>
+          
+          {credits}
+          
+          <div class="close icon-close js-credits-close">&nbsp;</div>
+      </div>
+    </div>
+  {/exp:channel:entries}
+  {if:else}
+      
+      {exp:channel:entries channel="music" dynamic="yes"}
+          <div class="music-item" itemprop="tracks" itemscope itemtype="http://schema.org/MusicRecording">
+
+            <div class="column"><h3 itemprop="name">{title}</h3></div>
+
+            <div class="music-item_cover-art medium-3 column">
+              <img src="{cover_art}" alt="{title}" itemprop="image">
+            </div>
+
+            <div class="music-item_title medium-3 column">
+
+              <div  class="music-item_description" itemprop="about">
+                  {description}
+              </div>
+            </div>
+
+            <div class="music-item_length medium-1 column">
+              {track_length} <meta itemprop="duration" content="PT4M10S" />
+            </div>
+
+            <meta itemprop="inAlbum" content="PC" />
+
+            <meta itemprop="url" content="PC" href="/music" />
+
+            <div class="music-item_play medium-5 column">
+              <iframe width="100%" height="100" scrolling="no" frameborder="no" src="{sound_cloud_url}"></iframe>
+
+              <div class="music-item_listen-buy large">
+                  {if itunes_link OR amazon_link}
+                        <div class="">
+                              <h4>Buy this track</h4>
+
+                              {if itunes_link}
+                                  <a href="{itunes_link}" class="icon-itunes" target="_blank" itemprop="audio"></a>
+                              {/if}
+
+                              {if amazon_link}
+                                  <a href="{amazon_link}" class="icon-amazon" target="_blank" itemprop="audio"></a>
+                              {/if}
+                        </div>
+                  {/if}
+
+                  {if spotify_link OR rdio_link OR sound_cloud_url}
+                        <div>
+                              <h4>Stream this track</h4>
+
+                              {if spotify_link}
+                                  <a href="{spotify_link}" class="icon-spotify" target="_blank" itemprop="audio"></a>
+                              {/if}
+
+                              {if rdio_link}
+                                  <a href="{rdio_link}" class="icon-rdio" target="_blank" itemprop="audio"></a>
+                              {/if}
+
+                              {if sound_cloud_url}
+                                  <a href="{sound_cloud_url}" class="icon-soundcloud" target="_blank"></a>
+                              {/if}
+                        </div>
+                  {/if}
+              </div>
+            </div>
+      
+            <div class="music-item_lyrics-small collapse">
+                  <div class="medium-7 column">
+                      <h3>Lyrics</h3>
+
+                      {lyrics}
+                  </div>
+
+                  <div class="medium-5 column">
+                      <h3>Credits</h3>
+                      
+                      {credits}
+                  </div>
+            </div>
+            
+          </div>
+        {/exp:channel:entries}
+  </div>
+  {/if} 
+{embed="Main/.footer"}

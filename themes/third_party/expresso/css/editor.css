@@ -1,0 +1,21 @@
+/*--- EE Styles Overwrite ---*/
+
+.cke_reset_all a {
+	text-decoration: none !important;
+}
+
+.cke_bottom {
+	padding: 0 8px !important;
+}
+
+.cke_bottom .cke_resizer {
+	margin: 2px -4px 3px 0 !important;
+}
+
+.cke_dialog a {
+	color: inherit !important;
+}
+
+.cke_dialog a.cke_dialog_ui_button_ok {
+	color: white !important;
+}
