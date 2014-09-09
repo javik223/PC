@@ -11351,11 +11351,51 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/about.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/about.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/contact.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/contact.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
 	"\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/media.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/media.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/music.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/music.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/videos.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/main.group\/videos.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
@@ -11375,11 +11415,43 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/nsm_better_meta.group\/category-index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/nsm_better_meta.group\/category-index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/nsm_better_meta.group\/entry.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/nsm_better_meta.group\/entry.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/nsm_better_meta.group\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/nsm_better_meta.group\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
 	"\/pcadmin\/expressionengine\/templates\/default_site\/videos.group\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/videos.group\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/pcadmin\/expressionengine\/templates\/default_site\/xml-sitemaps.group\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pcadmin\/expressionengine\/templates\/default_site\/xml-sitemaps.group\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},

@@ -20,7 +20,8 @@ $(document).ready(function(){
         $fitVideo,
         $overlay,
         $overlayCentered,
-        $videoLink;
+        $videoLink,
+        $mediaItem;
 
 
     $navLinks = $(".js-nav-links li");
@@ -40,6 +41,7 @@ $(document).ready(function(){
     $overlayCloseBtn = $(".js-overlay-close");
     $overlayCentered = $overlay.find('.overlay-centered');
     $videoLink = $(".js-video-link");
+    $mediaItem = $(".media-item");
 
     //If device is mobile, fit Headings to page
     if ( Modernizr.mq('(max-width: 600px)') ) {
@@ -149,11 +151,6 @@ $(document).ready(function(){
         TweenMax.fromTo($socialShare, 1.4, {x: 0, autoAlpha: 1}, {x: 50, autoAlpha: 0, display: 'none', z: 0, ease: Back.easeInOut});
     });
 
-    $(".media-items").packery({
-        itemSelector: '.media-item',
-        isInitLayout: true
-    });
-
     $(window).on('scroll', function() {
         clearTimeout(timer);
           if(!$("body").hasClass('disable-hover')) {
@@ -200,6 +197,16 @@ $(document).ready(function(){
         $overlay.find(".overlay-description").html($this.find(".description .centered").html());
 
         e.preventDefault();
+    });
+
+    $mediaItem.on("mouseenter", function(){
+        if(!$(this).hasClass("hovered")) {
+            $(this).addClass("hovered");
+        } 
+    }).on("mouseleave", function(){
+        if($(this).hasClass("hovered")) {
+            $(this).removeClass("hovered");
+        }
     });
 
 });
