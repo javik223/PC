@@ -1,15 +1,24 @@
 {embed="Main/.header"}
+
+<div class="overlay">
+        
+        <div class="icon-close js-overlay-close"></div>
+
+        <div class="loader overlay-loader"></div>
+    </div>
+
+
 <div class="media">
     <h2 class="page-header">MEDIA</h2>
 
        <div class="media-items collapse">
-            <div class="media-item column">
+            <a class="media-item column" data-images="PC-Paul-Chisom---looking-up.jpg, PC---Paul-Chisom-Biography-image.jpg, PC2.jpg, video-cover.jpg, PC10.jpg">
                 <img src="/assets/img/PC1.jpg">
 
                 <div class="media-item_description">
                     <h4>The Making of Chioma Video - Backstage</h4>
                 </div>
-            </div>
+            </a>
 
             <div class="media-item column">
                 <img src="/assets/img/PC2.jpg">
@@ -52,12 +61,52 @@
             </div>
        </div>
     
-       <h3>INSTRAGRAM FEED</h3>
+       <div class="wrapper instagram-feeds-container">
+           <div class="instagram-feeds">
+               <h3 class="centered"><a href="http://instagram.com/pcsong1" title="PC Song on instagram" target="_blank"><span class="icon-instagram instagram-logo"></span></a></h3>
 
-       <div>
-         {exp:tgl_instagram:feed}
-            {thumbnail}
-         {/exp:tgl_instagram:feed}
+               <!--<div>
+                 {exp:tgl_instagram:feed}
+                    {thumbnail}
+                 {/exp:tgl_instagram:feed}
+               </div>-->
+
+               <div class="item">
+                   <img src="/assets/img/PC5.jpg" alt="PC instagram image">
+
+                   <p>gidicarsBMW M5 cred: @amigoumar #bmw #m5 #Gidicars #spotted #contribution #abuja #Nigeria</p>
+               </div>
+
+               <div class="item">
+                   <img src="/assets/img/PC10.jpg" alt="PC instagram image">
+
+                   <p>gidicarsBMW M5 cred: @amigoumar #bmw #m5 #Gidicars #spotted #contribution #abuja #Nigeria</p>
+               </div>
+
+               <div class="item">
+                   <img src="/assets/img/PC11.jpg" alt="PC instagram image">
+
+                   <p>gidicarsBMW M5 cred: @amigoumar #bmw #m5 #Gidicars #spotted #contribution #abuja #Nigeria</p>
+               </div>
+
+               <div class="item">
+                   <img src="/assets/img/PC2.jpg" alt="PC instagram image">
+
+                   <p>gidicarsBMW M5 cred: @amigoumar #bmw #m5 #Gidicars #spotted #contribution #abuja #Nigeria</p>
+               </div>
+
+               <div class="item">
+                   <img src="/assets/img/PC-True-Love-ft.-Tim-Godfrey---Album-Art.jpg" alt="PC instagram image">
+
+                   <p>gidicarsBMW M5 cred: @amigoumar #bmw #m5 #Gidicars #spotted #contribution #abuja #Nigeria</p>
+               </div>
+
+               <div class="item">
+                   <img src="/assets/img/PC-Song-Album-Art-Chioma.jpg" alt="PC instagram image">
+
+                   <p>gidicarsBMW M5 cred: @amigoumar #bmw #m5 #Gidicars #spotted #contribution #abuja #Nigeria</p>
+               </div>
+           </div>
        </div>
   </div> 
 {embed="Main/.footer"}

@@ -34,6 +34,16 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/img\/gimage.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 123848,
+		"inputAbbreviatedPath": "\/assets\/img\/gimage.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/gimage.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/paul-chisom-biography.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -174,13 +184,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/pc6.jpg": {
+	"\/assets\/img\/PC6.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 260179,
-		"inputAbbreviatedPath": "\/assets\/img\/pc6.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/pc6.jpg",
+		"inputAbbreviatedPath": "\/assets\/img\/PC6.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/PC6.jpg",
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},

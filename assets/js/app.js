@@ -155,7 +155,6 @@ $(document).ready(function(){
         clearTimeout(timer);
           if(!$("body").hasClass('disable-hover')) {
             $("body").addClass('disable-hover');
-            console.log("scrolling disabled");
           }
           timer = setTimeout(function(){
             $("body").removeClass('disable-hover');
@@ -207,6 +206,40 @@ $(document).ready(function(){
         if($(this).hasClass("hovered")) {
             $(this).removeClass("hovered");
         }
+    }).on("click", function(e){
+        ov = new TimelineMax({yoyo: true, smoothChildTiming: true});
+        //ov.set($overlayCentered, {autoAlpha: 0.6});
+        ov.fromTo($overlay, 1.2, {z: 0, width: 0, autoAlpha: 0, delay:2}, {autoAlpha: 1, width: "100%", ease:"Back.easeOut"});
+        ov.fromTo($overlayCentered, 2, {z: 0, autoAlpha: 0}, {autoAlpha: 1, ease:"Back.easeOut"});
+
+        $this = $(this);
+        gTitle = $this.find(".media-item_description").text();
+        gImages = ($this.data("images").split(", "));
+
+        $overlay.prepend($(galleryContent(gTitle, gImages)));
+        $(".overlay.overlay-centered").fadeIn().css({visibility: "visible"});
+
+
+
+        //console.log(gallery);
+        e.preventDefault();
     });
+
+    function galleryContent(title, images) {
+        $(".overlay-centered").remove();
+        var content = '<div class="row overlay-centered collapse">';
+            content += '<h3 class="centered">' + title + '</h3>';
+            content +=  '<div class="gimage medium-8 medium-offset-2">';
+
+            for (i = 0; i < images.length; i++) {
+                content += '<img src="/assets/img/'+images[i]+'" data-src="'+images[i]+'">';
+            }
+
+            content += '</div>';
+
+            content += ' <div class="gnav"><span class="icon-arrow-left"></span><span class="icon-arrow-right"></span></div>';
+
+            return content;
+    }
 
 });

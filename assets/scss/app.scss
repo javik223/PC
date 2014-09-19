@@ -267,7 +267,7 @@ html {
 	.overlay-centered {
 		display: table-cell;
 		vertical-align: middle;
-		visibility: hidden;
+		//visibility: hidden;
 	}
 
 	.overlay-description {
@@ -304,4 +304,74 @@ html {
 		width: 100%;
 		opacity: 1;
 	}
+}
+.wrapper {
+	width: 100%;
+	float: left;
+}
+.centered {
+	text-align: center;
+}
+
+.loader:before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: -25px;
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+	@include animation( loader10g 3s ease-in-out infinite );
+}
+
+.loader{
+	position: relative;
+	width: 12px;
+	height: 12px;
+	top: 46%;
+	left: 46%;
+	border-radius: 12px;
+	@include animation( loader10m 3s ease-in-out infinite );
+
+	&.overlay-loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+
+.loader:after{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 25px;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	@include animation( loader10d 3s ease-in-out infinite );
+}
+
+@include keyframes(loader10g){
+	0%{background-color: rgba(255, 0, 0, .2);}
+	25%{background-color: rgba(255, 0, 0, 1);}
+	50%{background-color: rgba(255, 0, 0, .2);}
+	75%{background-color: rgba(255, 0, 0, .2);}
+	100%{background-color: rgba(255, 0, 0, .2);}
+}
+
+@include keyframes( loader10m ) {
+	0%{background-color: rgba(255, 0, 0, .2);}
+	25%{background-color: rgba(255, 0, 0, .2);}
+	50%{background-color: rgba(255, 0, 0, 1);}
+	75%{background-color: rgba(255, 0, 0, .2);}
+	100%{background-color: rgba(255, 0, 0, .2);}
+}
+
+@include keyframes( loader10d ) {
+	0%{background-color: rgba(255, 0, 0, .2);}
+	25%{background-color: rgba(255, 0, 0, .2);}
+	50%{background-color: rgba(255, 0, 0, .2);}
+	75%{background-color: rgba(255, 0, 0, 1);}
+	100%{background-color: rgba(255, 0, 0, .2);}
 }
